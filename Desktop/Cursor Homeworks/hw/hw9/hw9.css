@@ -1,0 +1,259 @@
+.star_wars {
+    width: 500px;
+    height: 400px;
+    background-color:cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swords {
+    width: 250px;
+    height: 10px;
+    margin: 20px auto;
+    background-color: rgb(49, 49, 37);
+    display: flex;
+
+}
+
+.black_part {
+    background-color:rgb(201, 176, 151);
+    height: 100%;
+    width: 20px;
+
+}
+
+.grey_part {
+    background-color: rgb(204, 204, 204);
+    height: 100%;
+    width: 40px;
+}
+
+.sword_1 {
+    transition: all 2s;
+}
+
+.sword_2 {
+    justify-content: flex-end;
+    transition: transform 2s, box-shadow 3s, background-color 4s;
+}
+
+.sword_3 {
+    transition: transform 2s, box-shadow 3s, background-color 4s;
+}
+
+.active:hover .sword_1 {
+    transform: translateY(-60px);
+    opacity: 0;
+}
+
+.active:hover .sword_2 {
+    transform: rotate(45deg);
+    box-shadow: -30px 0 30px 5px rgb(167, 45, 86);
+    background-color: rgb(131, 57, 71);
+}
+
+.active:hover .sword_3 {
+    transform: rotate(-45deg);
+    transform-origin: 35% 10%;
+    box-shadow: 30px 0 30px 5px rgb(99, 223, 105);
+    background-color: rgb(49, 187, 56);
+
+}
+
+
+.pendulum_zone {
+    width: 500px;
+    height: 400px;
+    background-color: rgb(199, 181, 148);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pendulum {
+    /* width: 500px;
+    height: 400px; */
+    /* background-color: rgb(174, 226, 219); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balls {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    opacity: 0.8;
+    /* box-shadow: 0 100px 25px -5px rgb(158, 145, 145); */
+
+}
+
+.ball_1 {
+    background-color: rgb(23, 143, 63);
+}
+
+.ball_2 {
+    background-color: rgb(184, 25, 104);
+}
+
+.ball_3 {
+    background-color: rgb(27, 174, 179);
+}
+
+.ball_4 {
+    background-color: rgb(199, 51, 63);
+}
+
+.ball_5 {
+    background-color: rgb(214, 208, 26);
+}
+
+.ball_6 {
+    background-color: rgb(139, 9, 231);
+}
+
+.ball_7 {
+    background-color: rgb(0, 123, 255);
+}
+
+.shadow_box {
+    display: flex;
+}
+
+.shadow {
+    width: 35px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 20px 7px rgb(119, 54, 54);
+}
+
+.shadow_first {
+    position: relative;
+    animation-name: shadow_first;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shadow_first {
+    0% {
+        right: 0px;
+    }
+
+    20% {
+        right: 80px;
+    }
+
+    50% {
+        right: 0px;
+    }
+
+    70% {
+        right: 0px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+.shadow_end {
+    position: relative;
+    animation-name: shadow_end;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shadow_end {
+    0% {
+        left: 0px;
+    }
+
+    20% {
+        left: 0px;
+    }
+
+    50% {
+        left: 0px;
+    }
+
+    80% {
+        left: 80px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.axix_rigt {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    transform: rotate(0);
+    transform-origin: top;
+    animation-name: ball_7;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ball_7 {
+    0% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    80% {
+        transform: rotate(-85deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.axix_left {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    transform-origin: top;
+    animation-name: ball_1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ball_1 {
+    0% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(80deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    70% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
