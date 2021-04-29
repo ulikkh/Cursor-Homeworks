@@ -1,0 +1,506 @@
+@import '_hw10.scss';
+
+body {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    min-width: 270px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section_flex {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: space-between;
+}
+
+%btn {
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    background: #111B47;
+    border-radius: 2px;
+    padding: 5px 30px 5px 30px;
+    border: 2px solid #091133;
+    cursor: pointer;
+}
+
+%nav {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+%logo {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 38px;
+    color: $logo;
+}
+
+
+
+
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(xs) {
+        flex-wrap: wrap;
+    }
+
+    button {
+        font-size: 12px;
+        width: 140px;
+        height: 26px;
+    }
+
+    .logo {
+        margin-right: 15%;
+
+        @include breakpoint(lg) {
+            margin: auto 6px;
+
+        }
+    }
+
+    .btn {
+        @include breakpoint(xs) {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+    @extend %nav;
+
+    li {
+        padding-right: 60px;
+
+        @include breakpoint(md) {
+            padding-right: 20px;
+        }
+
+        &:last-child {
+            padding-right: 0px;
+        }
+
+        >a {
+            color: $maintext;
+
+            &:hover {
+                color: $title;
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+
+.logo {
+    @extend %logo;
+}
+
+button {
+    @extend %btn;
+
+    &:hover {
+        background-color: $maintext;
+        transition-duration: 0.2s;
+        border-color: $maintext;
+        box-shadow: 3px 3px 10px 0px #090c16bf;
+        color: $title;
+    }
+}
+
+//-----------section_first-----------
+.section_first {
+    margin-top: 20%;
+
+    @include breakpoint(lg) {
+        margin-top: 10%;
+    }
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @include breakpoint(lg) {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 66px;
+        letter-spacing: 1px;
+        color: $title;
+
+        @include breakpoint(md) {
+            font-size: 32px;
+            line-height: 42px;
+
+        }
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        color: $maintext;
+
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
+    }
+
+    .buttons {
+        margin-top: 70px;
+
+        @include breakpoint(lg) {
+            margin: 30px 20px 0 40px;
+
+        }
+    }
+
+    button {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+
+        @include breakpoint(sm) {
+            font-weight: 100;
+            padding: 5px 10px;
+            line-height: 14px;
+        }
+
+    }
+
+    .transparent {
+        background: transparent;
+        color: $title;
+        border: 2px solid #091133;
+        box-sizing: border-box;
+        margin-left: 30px;
+
+        @include breakpoint(md) {
+            margin: 10px auto;
+        }
+
+        &:hover {
+            background-color: $maintext;
+            transition-duration: 0.2s;
+            border-color: $maintext;
+            box-shadow: 3px 3px 10px 0px #090c16bf;
+            color: $title;
+        }
+    }
+}
+
+.section_first__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @include breakpoint(lg) {
+        img {
+            display: none;
+        }
+    }
+}
+
+//-----------section_second-----------
+
+.section_second {
+    .image img {
+        width: 100%;
+    }
+
+    margin-top: 40%;
+    margin-bottom: 20%;
+
+    @include breakpoint(lg) {
+        margin-top: 15%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+.text_title {
+    h2 {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        color: $title;
+
+        @include breakpoint(md) {
+            font-size: 25px;
+        }
+
+    }
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: $text;
+
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+.text {
+    width: 50%;
+
+    @include breakpoint(lg) {
+        width: 60%;
+        justify-content: center;
+    }
+
+    &_goes {
+        display: flex;
+        margin-top: 80px;
+
+        h3 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            color: $title;
+
+        }
+
+        p {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            color: $grey;
+
+        }
+
+        &_item:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+}
+
+//-----------section_third-----------
+
+.section_third {
+    margin-bottom: 15%;
+
+    @include breakpoint(lg) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .text {
+        width: 40%;
+
+        @include breakpoint(lg) {
+            width: 60%;
+            justify-content: center;
+            margin-bottom: 5%;
+        }
+
+        &_title {
+            button {
+                margin-top: 20px;
+            }
+
+        }
+
+    }
+}
+
+//-----------section_fourth-----------
+
+.section_fourth {
+    display: flex;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    top: 73px;
+
+    .text {
+        margin: 17% auto 15% auto;
+        text-align: center;
+        width: 45%;
+
+        @include breakpoint(lg) {
+            margin: 10% auto 20% auto;
+            text-align: center;
+            width: 50%;
+        }
+
+        .kit {
+            color: #37447E;
+            margin: 0 0 60px 0;
+        }
+    }
+
+    .price {
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 66px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #222F65;
+
+        @include breakpoint(sm) {
+            margin-top: 20px;
+            font-size: 36px;
+        }
+    }
+
+    .one_price {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #5D6970;
+        margin-bottom: 9px;
+    }
+
+    button {
+        @include breakpoint(sm) {
+            font-weight: 100;
+            padding: 5px 10px;
+            line-height: 14px;
+            margin-bottom: 50px;
+        }
+    }
+
+}
+
+.footer_img {
+    position: absolute;
+    top: 10%;
+    z-index: -1;
+
+    @include breakpoint(md) {
+        top: -10%;
+    }
+}
+
+//-----------footer-----------
+.footer {
+    padding-top: 65px;
+    background-color: #E7ECFF;
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #939EA4;
+        }
+
+    }
+
+    .logo {
+        @include breakpoint(sm) {
+            margin: 20px auto;
+        }
+    }
+
+    button {
+        font-size: 12px;
+        line-height: 18px;
+        width: 109px;
+        height: 26px;
+        padding: 0;
+    }
+
+    .footer_botoom {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        padding-top: 20px;
+
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav {
+            li>a {
+                color: $unactive;
+                ;
+
+                &:hover {
+                    color: $title;
+                    transition-duration: 0.2s;
+                }
+            }
+        }
+
+        .social_links {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            a:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            path:hover {
+                fill: $title;
+                transition-duration: 0.2s;
+            }
+
+        }
+    }
+}
+
+.line {
+    background: #CDD1D4;
+    width: 100%;
+    height: 1px;
+}
